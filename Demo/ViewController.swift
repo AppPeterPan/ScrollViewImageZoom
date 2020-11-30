@@ -45,8 +45,7 @@ extension ViewController: UIScrollViewDelegate {
     }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        let inset = (scrollView.bounds.height - imageView.bounds.height * scrollView.zoomScale) / 2
+        let inset = (scrollView.bounds.height - imageView.frame.height) / 2
         scrollView.contentInset = .init(top: max(inset, 0), left: 0, bottom: 0, right: 0)
-        print(scrollView.zoomScale)
     }
 }
